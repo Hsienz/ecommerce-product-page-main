@@ -1,38 +1,16 @@
-import imageProduct1Thumbnail from "../assets/images/image-product-1-thumbnail.jpg";
-import imageProduct2Thumbnail from "../assets/images/image-product-2-thumbnail.jpg";
-import imageProduct3Thumbnail from "../assets/images/image-product-3-thumbnail.jpg";
-import imageProduct4Thumbnail from "../assets/images/image-product-4-thumbnail.jpg";
-import imageProduct1 from "../assets/images/image-product-1.jpg";
-import imageProduct2 from "../assets/images/image-product-2.jpg";
-import imageProduct3 from "../assets/images/image-product-3.jpg";
-import imageProduct4 from "../assets/images/image-product-4.jpg";
 import iconPrevious from "../assets/images/icon-previous.svg";
 import iconNext from "../assets/images/icon-next.svg";
 import { useState } from "react";
+import { images } from "./products";
+import Lightbox from "./Lightbox";
 const Product = () => {
 	const [selected, setSelected] = useState(0);
-	const images = [
-		{
-			image: imageProduct1,
-			thumbnail: imageProduct1Thumbnail,
-		},
-		{
-			image: imageProduct2,
-			thumbnail: imageProduct2Thumbnail,
-		},
-		{
-			image: imageProduct3,
-			thumbnail: imageProduct3Thumbnail,
-		},
-		{
-			image: imageProduct4,
-			thumbnail: imageProduct4Thumbnail,
-		},
-	];
+    const [openLightbox, setOpenLightbox] = useState(false)
 	return (
 		<div className="flex flex-col gap-y-4">
+            {openLightbox && <Lightbox setOpenLightbox={setOpenLightbox}/>}
 			<div className="group flex items-center relative">
-				<button>
+				<button onClick={()=>setOpenLightbox(true)}>
 					<img
 						className="lg:rounded-xl"
 						src={images[selected].image}

@@ -15,8 +15,8 @@ const Menu = (props: PropType) => {
 				<button className="lg:hidden" onClick={() => props.setMenu(false)}>
 					<img src={iconClose} alt="" />
 				</button>
-				<div className="flex flex-col gap-4 lg:flex-row">
-					<a className="lg:hover:text-Dark_grayish_blue duration-300 box-border hover:border-b-Orange hover:border-b-2" href="#">Collections</a>
+				<div className="flex flex-col gap-4 lg:flex-row lg:gap-8">
+					<a className="lg:hover:text-Dark_grayish_blue duration-300 hover:border-b-Orange hover:border-b-2" href="#">Collections</a>
 					<a className="lg:hover:text-Dark_grayish_blue duration-300 hover:border-b-Orange hover:border-b-2" href="#">Men</a>
 					<a className="lg:hover:text-Dark_grayish_blue duration-300 hover:border-b-Orange hover:border-b-2" href="#">Women</a>
 					<a className="lg:hover:text-Dark_grayish_blue duration-300 hover:border-b-Orange hover:border-b-2" href="#">About</a>

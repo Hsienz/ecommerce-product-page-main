@@ -14,7 +14,7 @@ const Header = (props: HeaderPropType) => {
 	const [openCart, setOpenCart] = useState(false);
 	return (
 		<div className="flex justify-between items-center px-4 h-full">
-			<div className="flex items-center gap-x-4 h-full">
+			<div className="flex items-center gap-x-4 lg:gap-x-8">
 				<button
                     className="lg:hidden"
 					onClick={() => {
@@ -26,7 +26,7 @@ const Header = (props: HeaderPropType) => {
 				<img className="h-5" src={logo} alt="" />
 				<Menu menu={menu} setMenu={setMenu} />
 			</div>
-			<div className="flex items-center gap-x-4">
+			<div className="flex items-center gap-x-4 lg:gap-x-8">
 				<button
 					className="relative"
 					onClick={() => setOpenCart(!openCart)}
