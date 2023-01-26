@@ -63,9 +63,15 @@ const Product = () => {
 						onClick={() => {
 							setSelected(i);
 						}}
+						className={`
+                        ${
+							selected == i
+								? "!border-Orange"
+								: ""
+						} rounded-xl duration-300 border-transparent border-2 relative overflow-hidden group`}
 					>
 						{" "}
-						<img className="rounded-lg" src={x.thumbnail} alt="" />
+						<img className={`group-hover:opacity-70 ${selected == i ? "opacity-50" : "" }`} src={x.thumbnail} alt="" />
 					</button>
 				))}
 			</div>
